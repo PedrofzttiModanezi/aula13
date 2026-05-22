@@ -13,7 +13,7 @@ body {
     justify-content: flex-start; /* Alinha o container à esquerda */
     align-items: center;
     min-height: 100vh;
-    background: url(/imgs/bg_3.png) no-repeat;
+    background: url(./imgs/bg_3.png) no-repeat;
     background-size: cover;
     background-position: center;
     padding-left: 10%; /* Espaço da borda esquerda no computador */
