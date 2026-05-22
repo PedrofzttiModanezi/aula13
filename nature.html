@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frutas Tropicais Brasileiras</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #e8f5e9, #d0f0d8);
+      background-image: url("imgs/bg_body.png");
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2e7d32, #c62828);
+      background-image: url("imgs/bg_3.png");
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    nav {
+      background: #d9ff00a9;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #283593;
+      transform: scale(1.1);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 50px auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h2 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #283593;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #1a237e;
+    }
+
+    .highlight {
+      background: #e8f5e9;
+      padding: 60px 20px;
+      text-align: center;
+      margin-top: 60px;
+      border-radius: 20px;
+    }
+
+    .highlight h2 {
+      color: #c62828;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .counter {
+      font-size: 3rem;
+      color: #2e7d32;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Frutas Tropicais Brasileiras</h1>
+    <p>
+      Descubra os sabores, aromas e cores das frutas tropicais mais famosas do Brasil.
+      Uma viagem refrescante pela biodiversidade brasileira.
+    </p>
+  </header>
+
+  <nav>
+    <a href="#manga">Manga</a>
+    <a href="#acai">Açaí</a>
+    <a href="#caju">Caju</a>
+    <a href="#graviola">Graviola</a>
+  </nav>
+
+  <main class="container">
+    <section class="cards">
+
+      <article class="card" id="manga">
+        <img src="./imgs/manga.jpg" alt="Manga" />
+        <div class="card-content">
+          <h2>Manga</h2>
+          <p>
+            A manga é uma fruta tropical doce, suculenta e muito popular no Brasil.
+            Rica em vitaminas A e C, é perfeita para sucos, sobremesas e consumo natural.
+          </p>
+          <a href="#" class="btn">Saiba Mais</a>
+        </div>
+      </article>
+
+      <article class="card" id="acai">
+        <img src="./imgs/açai.jpg" alt="Açaí" />
+        <div class="card-content">
+          <h2>Açaí</h2>
+          <p>
+            O açaí é um símbolo da Amazônia. Conhecido pelo alto valor energético,
+            é consumido em tigelas, smoothies e sobremesas refrescantes.
+          </p>
+          <a href="#" class="btn">Saiba Mais</a>
+        </div>
+      </article>
+
+      <article class="card" id="caju">
+        <img src="./imgs/caju.jpg" alt="Caju" />
+        <div class="card-content">
+          <h2>Caju</h2>
+          <p>
+            O caju é famoso tanto pela castanha quanto pelo fruto suculento.
+            Muito presente no Nordeste brasileiro, é usado em sucos e doces.
+          </p>
+          <a href="#" class="btn">Saiba Mais</a>
+        </div>
+      </article>
+
+      <article class="card" id="graviola">
+        <img src="./imgs/graviola.jpg" alt="Graviola" />
+        <div class="card-content">
+          <h2>Graviola</h2>
+          <p>
+            A graviola possui sabor único e refrescante. Muito usada em vitaminas,
+            sorvetes e sucos tropicais.
+          </p>
+          <a href="#" class="btn">Saiba Mais</a>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="highlight">
+      <h2>Brasil: potência em biodiversidade tropical</h2>
+      <p>
+        O Brasil possui centenas de espécies de frutas tropicais espalhadas por seus biomas.
+      </p>
+      <div class="counter" id="counter">0</div>
+      <p>espécies catalogadas</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 • Página criada com HTML, CSS e JavaScript</p>
+  </footer>
+
+  <script>
+    const counter = document.getElementById('counter');
+    let count = 0;
+    const target = 320;
+
+    const updateCounter = () => {
+      if (count < target) {
+        count += 4;
+        counter.textContent = count;
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = target;
+      }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          updateCounter();
+          observer.disconnect();
+        }
+      });
+    });
+
+    observer.observe(counter);
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
